@@ -1,6 +1,37 @@
 {
   "title": "Час 001",
   "sections": [
-    { "type": "text", "heading": "Вовед", "content": "" }
+    {
+      "type": "text",
+      "heading": "Вовед",
+      "content": "..."
+    },
+    {
+      "type": "mcq",
+      "heading": "MCQ",
+      "questions": [
+        {
+          "q": "Прашање?",
+          "options": ["A", "B", "C", "D"],
+          "answerIndex": 0,
+          "explain": "Објаснување..."
+        }
+      ]
+    },
+    {
+      "type": "short",
+      "heading": "Краток одговор",
+      "questions": [
+        { "q": "Внеси одговор:", "answer": "точно", "explain": "..." }
+      ]
+    },
+    {
+      "type": "dragmatch",
+      "heading": "Поврзи",
+      "pairs": [
+        { "left": "Лево1", "right": "Десно1" },
+        { "left": "Лево2", "right": "Десно2" }
+      ]
+    }
   ]
 }
