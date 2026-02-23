@@ -1,0 +1,5 @@
+body { font-family: system-ui, Arial, sans-serif; margin: 24px; line-height: 1.6; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1 { margin-bottom: 12px; }
+ul { padding-left: 18px; }
