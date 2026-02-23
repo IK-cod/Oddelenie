@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="mk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Интерактивни часови</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <h1>Интерактивни часови</h1>
+  <p>Избери одделение и час:</p>
+
+  <label>Одделение:</label>
+  <select id="odd">
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+  </select>
+
+  <label style="margin-left:10px;">Час:</label>
+  <input id="cas" type="number" min="1" value="1" />
+
+  <button id="open">Отвори</button>
+
+  <p>Пример: 6 одделение, час 12 → 012</p>
+
+  <script>
+    const totals = {6: 180, 7: 144, 8: 144, 9: 144};
+    const oddEl = document.getElementById('odd');
+    const casEl = document.getElementById('cas');
+
+    function pad3(n){ return String(n).padStart(3, '0'); }
+
+    function clampLesson() {
+      const odd = Number(oddEl.value);
+      const max = totals[odd];
+      casEl.max = max;
+      if (Number(casEl.value) > max) casEl.value = max;
+      if (Number(casEl.value) < 1) casEl.value = 1;
+    }
+
+    oddEl.addEventListener('change', clampLesson);
+    clampLesson();
+
+    document.getElementById('open').addEventListener('click', () => {
+      const odd = oddEl.value;
+      const cas = pad3(Number(casEl.value));
+      window.location.href = `lesson.html?odd=${odd}&cas=${cas}`;
+    });
+  </script>
+</body>
+</html>
