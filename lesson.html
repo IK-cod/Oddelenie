@@ -1,1 +1,37 @@
+<!doctype html>
+<html lang="mk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Час</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="nav">
+      <a class="btn" href="index.html">← Почетна</a>
+      <a class="btn" id="prev" href="#">⟵ Претходен</a>
+      <a class="btn" id="next" href="#">Следен ⟶</a>
+    </div>
 
+    <div class="titleRow">
+      <h1 id="title">Час</h1>
+      <div class="pill" id="meta"></div>
+    </div>
+
+    <div class="scorebar">
+      <div class="pill">⏱️ <span id="timer">00:00</span></div>
+      <div class="pill">⭐ Поени: <span id="points">0</span></div>
+      <button class="btn primary" id="start">Старт</button>
+      <button class="btn" id="reset">Ресет</button>
+    </div>
+  </header>
+
+  <main class="panel">
+    <div id="status" class="hint"></div>
+    <div id="content"></div>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
